@@ -14,6 +14,31 @@
 <properties>
 <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 </properties>
+<build>
+ <plugins>
+     <plugin> 
+
+                <!-- Building an executable jar -->
+<!--  
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+              -->  
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                
+                <configuration>
+                  <archive>
+                    <manifest>
+
+                    <!-- give full qualified name of your main class-->
+                      <mainClass>com.my.springboot.SpringBootExample</mainClass>
+
+                    </manifest>
+                  </archive>
+                </configuration>
+    </plugin>
+ </plugins>
+</build>
 <dependencies>
 <dependency>
 <groupId>junit</groupId>
